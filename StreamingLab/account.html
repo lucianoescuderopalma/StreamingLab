@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gestionar Cuentas - Streaming Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo neon-title">Streaming Lab</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="plans.html">Planes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ACCOUNTS TABLE -->
+  <main class="container">
+    <section class="card">
+      <h2>Cuentas vinculadas</h2>
+      <button id="addAccountBtn" class="btn primary">Agregar cuenta</button>
+
+      <table id="accountsTable" class="striped">
+        <thead>
+          <tr><th>Plataforma</th><th>Usuario</th><th>Plan</th><th>Acciones</th></tr>
+        </thead>
+        <tbody>
+          <!-- Filas dinámicas con JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ACCOUNT FORM -->
+    <section class="card" id="accountFormSection" style="display:none;">
+      <h3 id="formTitle">Agregar cuenta</h3>
+      <form id="accountForm" novalidate>
+        <label for="platform">Plataforma</label>
+        <input id="platform" name="platform" required />
+        <small class="error" id="platformError"></small>
+
+        <label for="accUser">Usuario / Correo</label>
+        <input id="accUser" name="accUser" type="email" required />
+        <small class="error" id="accUserError"></small>
+
+        <label for="accPlan">Plan</label>
+        <select id="accPlan" name="accPlan">
+          <option value="basico">Básico</option>
+          <option value="premium">Premium</option>
+          <option value="familiar">Familiar</option>
+        </select>
+
+        <button class="btn primary" type="submit">Guardar</button>
+        <button class="btn" type="button" id="cancelForm">Cancelar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Streaming Lab</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+

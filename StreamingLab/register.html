@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registro - Streaming Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo neon-title">Streaming Lab</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- REGISTER FORM -->
+  <main class="container">
+    <section class="card auth-card">
+      <h2>Crear cuenta</h2>
+      <form id="registerForm" novalidate>
+        <label for="name">Nombre completo</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+        <small class="error" id="nameError"></small>
+
+        <label for="regEmail">Correo electrónico</label>
+        <input id="regEmail" name="regEmail" type="email" required autocomplete="email" />
+        <small class="error" id="regEmailError"></small>
+
+        <label for="regPassword">Contraseña</label>
+        <input id="regPassword" name="regPassword" type="password" required minlength="8" />
+        <small class="error" id="regPasswordError"></small>
+
+        <label for="confirmPassword">Confirmar contraseña</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" required minlength="8" />
+        <small class="error" id="confirmPasswordError"></small>
+
+        <button class="btn primary" type="submit">Crear cuenta</button>
+      </form>
+      <p>¿Ya tienes cuenta? <a href="login.html">Entrar</a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Streaming Lab</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
